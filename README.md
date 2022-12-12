@@ -33,10 +33,11 @@ SQLite数据库。
 + + + + `其他数据库OToolStripMenuItem`  
 + + + `toolStripSeparator1`  
 + + + `合并MToolStripMenuItem`  
-+ + `--数据DToolStripMenuItem`  
++ + `数据DToolStripMenuItem`  
++ + + `检查数据库CToolStripMenuItem`  
 + + + `忽略重复项IToolStripMenuItem`  
 + + + `替换重复项RToolStripMenuItem`  
-+ + `--关于AToolStripMenuItem`  
++ + `关于AToolStripMenuItem`  
 + + + `源代码开源ToolStripMenuItem`  
 + + + `制作团队ToolStripMenuItem`  
 + `saveFileDialog1`  
