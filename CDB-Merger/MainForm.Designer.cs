@@ -78,7 +78,7 @@
             // 新建NToolStripMenuItem
             // 
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             // 
             // 打开ToolStripMenuItem
@@ -87,30 +87,31 @@
             this.主数据库MToolStripMenuItem,
             this.其他数据库OToolStripMenuItem});
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.打开ToolStripMenuItem.Text = "打开";
             // 
             // 主数据库MToolStripMenuItem
             // 
             this.主数据库MToolStripMenuItem.Name = "主数据库MToolStripMenuItem";
-            this.主数据库MToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.主数据库MToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.主数据库MToolStripMenuItem.Text = "主数据库(&M)";
+            this.主数据库MToolStripMenuItem.Click += new System.EventHandler(this.Open_As_Main);
             // 
             // 其他数据库OToolStripMenuItem
             // 
             this.其他数据库OToolStripMenuItem.Name = "其他数据库OToolStripMenuItem";
-            this.其他数据库OToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.其他数据库OToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.其他数据库OToolStripMenuItem.Text = "其他数据库(&O)";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // 合并MToolStripMenuItem
             // 
             this.合并MToolStripMenuItem.Name = "合并MToolStripMenuItem";
-            this.合并MToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.合并MToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.合并MToolStripMenuItem.Text = "合并(&M)";
             // 
             // 数据DToolStripMenuItem
@@ -207,6 +208,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
             // 
             // MainForm
             // 
