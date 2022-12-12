@@ -102,6 +102,7 @@
             this.其他数据库OToolStripMenuItem.Name = "其他数据库OToolStripMenuItem";
             this.其他数据库OToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.其他数据库OToolStripMenuItem.Text = "其他数据库(&O)";
+            this.其他数据库OToolStripMenuItem.Click += new System.EventHandler(this.Open_As_Other);
             // 
             // toolStripSeparator1
             // 

@@ -1,5 +1,6 @@
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 // datas表列名：id	ot	alias	setcode	type	atk	def	level	race	attribute	category
 // texts表列名：id	name	desc	str1	str2	str3	str4	str5	str6	str7	str8	str9	str10	str11	str12	str13	str14	str15	str16
 namespace CDB_Merger
@@ -78,7 +79,7 @@ namespace CDB_Merger
             InitializeComponent();
         }
         /// <summary>
-        /// <para>打开数据库，并把他设为主数据库。</para>
+        /// <para>打开数据库，并把它设为主数据库。</para>
         /// <para>设置之前，先检查数据库合法性。</para>
         /// <para></para>
         /// <para>Made by F-Ate at 22.12.12</para>
@@ -103,6 +104,51 @@ namespace CDB_Merger
                 }
             }
         }
-
+        /// <summary>
+        /// <para>打开1个（以上）数据库，并把它（们）设为其他数据库。</para>
+        /// <para>设置之前，先检查数据库合法性。</para>
+        /// <para></para>
+        /// <para>Made by F-Ate at 22.12.12</para>
+        /// </summary>
+        /// <param name="sender">触发委托的控件</param>
+        /// <param name="e"></param>
+        public void Open_As_Other(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "打开";  //设置对话框标题
+            openFileDialog1.Filter = "YGOPro 数据库|*.cdb";  //设置文件类型
+            openFileDialog1.FileName = string.Empty;  //设置默认文件名
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)  //显示对话框
+            {
+                if(openFileDialog1.FileNames.Length > 1)  //多个文件
+                {
+                    foreach (string path in openFileDialog1.FileNames)  //遍历每个文件
+                    {
+                        if (listBox1.Items.Contains(path) || path == textBox1.Text)  //判断路径是否在listBox1中或是否是textBox1显示的文本
+                        {
+                            //无效操作
+                            MessageBox.Show("The operate of\n" + path + "\nis invalid.\nReason:File already exists.");
+                            continue;  //进入下一次循环
+                        }
+                        if (Filter(path))  //检查数据库合法性
+                        {
+                            listBox1.Items.Add(path);  //添加项
+                        }
+                    }
+                }
+                else if(openFileDialog1.FileNames.Length == 1)  //单个文件
+                {
+                    if (listBox1.Items.Contains(openFileDialog1.FileName) || openFileDialog1.FileName == textBox1.Text)  //判断路径是否在listBox1中或是否是textBox1显示的文本
+                    {
+                        //无效操作
+                        MessageBox.Show("The operate of\n" + openFileDialog1.FileName + "\nis invalid.\nReason:File already exists.");
+                        return;  //进入下一次循环
+                    }
+                    if (Filter(openFileDialog1.FileName))  //检查数据库合法性
+                    {
+                        listBox1.Items.Add(openFileDialog1.FileName);  //添加项
+                    }
+                }
+            }
+        }
     }
 }
