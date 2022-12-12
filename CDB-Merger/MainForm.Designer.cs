@@ -34,10 +34,10 @@
             this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.主数据库MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.其他数据库OToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.数据DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.检查数据库CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.合并MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.检查数据库CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.忽略重复项IToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.替换重复项RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,14 +93,25 @@
             // 主数据库MToolStripMenuItem
             // 
             this.主数据库MToolStripMenuItem.Name = "主数据库MToolStripMenuItem";
-            this.主数据库MToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.主数据库MToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.主数据库MToolStripMenuItem.Text = "主数据库(&M)";
             // 
             // 其他数据库OToolStripMenuItem
             // 
             this.其他数据库OToolStripMenuItem.Name = "其他数据库OToolStripMenuItem";
-            this.其他数据库OToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.其他数据库OToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.其他数据库OToolStripMenuItem.Text = "其他数据库(&O)";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
+            // 
+            // 合并MToolStripMenuItem
+            // 
+            this.合并MToolStripMenuItem.Name = "合并MToolStripMenuItem";
+            this.合并MToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.合并MToolStripMenuItem.Text = "合并(&M)";
             // 
             // 数据DToolStripMenuItem
             // 
@@ -113,32 +126,21 @@
             // 检查数据库CToolStripMenuItem
             // 
             this.检查数据库CToolStripMenuItem.Name = "检查数据库CToolStripMenuItem";
-            this.检查数据库CToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.检查数据库CToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.检查数据库CToolStripMenuItem.Text = "检查数据库(&C)";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
-            // 
-            // 合并MToolStripMenuItem
-            // 
-            this.合并MToolStripMenuItem.Name = "合并MToolStripMenuItem";
-            this.合并MToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.合并MToolStripMenuItem.Text = "合并(&M)";
             // 
             // 忽略重复项IToolStripMenuItem
             // 
             this.忽略重复项IToolStripMenuItem.Checked = true;
             this.忽略重复项IToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.忽略重复项IToolStripMenuItem.Name = "忽略重复项IToolStripMenuItem";
-            this.忽略重复项IToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.忽略重复项IToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.忽略重复项IToolStripMenuItem.Text = "忽略重复项(&I)";
             // 
             // 替换重复项RToolStripMenuItem
             // 
             this.替换重复项RToolStripMenuItem.Name = "替换重复项RToolStripMenuItem";
-            this.替换重复项RToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.替换重复项RToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.替换重复项RToolStripMenuItem.Text = "替换重复项(&R)";
             // 
             // 关于AToolStripMenuItem
@@ -153,13 +155,13 @@
             // 源代码开源ToolStripMenuItem
             // 
             this.源代码开源ToolStripMenuItem.Name = "源代码开源ToolStripMenuItem";
-            this.源代码开源ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.源代码开源ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.源代码开源ToolStripMenuItem.Text = "源代码开源";
             // 
             // 制作团队ToolStripMenuItem
             // 
             this.制作团队ToolStripMenuItem.Name = "制作团队ToolStripMenuItem";
-            this.制作团队ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.制作团队ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.制作团队ToolStripMenuItem.Text = "制作团队";
             // 
             // label1
@@ -202,6 +204,10 @@
             this.listBox1.Size = new System.Drawing.Size(704, 378);
             this.listBox1.TabIndex = 4;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -243,5 +249,7 @@
         private Label label2;
         private TextBox textBox1;
         private ListBox listBox1;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }

@@ -6,5 +6,9 @@ namespace CDB_Merger
         {
             InitializeComponent();
         }
+        public void Open_As_Main(object sender, EventArgs e)  //Made by F-Ate at 22.12.12
+        {
+            
+        }
     }
 }
