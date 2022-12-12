@@ -2,6 +2,7 @@
 由F-Ate创建的C#项目。
 ## 功能
 + 新建数据库。使得该数据库满足下文的要求。
++ 检查数据库是否符合下文的要求。
 + 打开 $1$ 个数据库，若符合下文的要求，则将`textBox1.Text` 属性设置为其完整路径或在 `listBox1.Items` 中加入项，项为其完整路径。
 + 打开多个数据库，在 `listBox1.Items` 中加入项，项为其全部的符合下文要求的数据库的完整路径。
 + 合并数据库。需使用 `INSERT OR IGNORE` 或 `INSERT OR REPLACE` 语句。取决于 `忽略重复项IToolStripMenuItem.Checked` 属性与 `替换重复项RToolStripMenuItem.Checked` 属性。
