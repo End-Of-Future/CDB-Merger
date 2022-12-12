@@ -2,9 +2,10 @@
 由F-Ate创建的C#项目。
 ## 功能
 + 新建数据库。使得该数据库满足下文的要求。
-+ 打开 $1$ 个数据库，若符合下午的要求，则将`textBox1.Text` 属性设置为其完整路径或在 `listBox1.Items` 中加入项，项为其完整路径。
++ 检查数据库是否符合下文的要求。
++ 打开 $1$ 个数据库，若符合下文的要求，则将`textBox1.Text` 属性设置为其完整路径或在 `listBox1.Items` 中加入项，项为其完整路径。
 + 打开多个数据库，在 `listBox1.Items` 中加入项，项为其全部的符合下文要求的数据库的完整路径。
-+ 合并数据库。需使用 `INSERT OR IGNORE` 或 `INSERT OR REPLACE` 语句。取决于 `忽略重复项IToolItem.Checked` 属性与 `替换重复项RToolItem.Checked` 属性。
++ 合并数据库。需使用 `INSERT OR IGNORE` 或 `INSERT OR REPLACE` 语句。取决于 `忽略重复项IToolStripMenuItem.Checked` 属性与 `替换重复项RToolStripMenuItem.Checked` 属性。
 ## 数据库要求
 SQLite数据库。  
 有 $2$ 个表：`datas` 和 `texts`。  
@@ -19,6 +20,28 @@ SQLite数据库。
 |--|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|-----|-----|-----|
 |integer|text|text|text|text|text|text|text|text|text|text|text|text|text|text|text|text|text|text|
 |primary key|
+## 窗体控件（组件）列表
++ `label1`  
++ `label2`  
++ `textBox1`  
++ `listBox1`  
++ `menuStrip1`  
++ + `文件FToolStripMenuItem`  
++ + + `新建NToolStripMenuItem`  
++ + + `打开ToolStripMenuItem`  
++ + + + `主数据库AToolStripMenuItem`  
++ + + + `其他数据库OToolStripMenuItem`  
++ + + `toolStripSeparator1`  
++ + + `合并MToolStripMenuItem`  
++ + `数据DToolStripMenuItem`  
++ + + `检查数据库CToolStripMenuItem`  
++ + + `忽略重复项IToolStripMenuItem`  
++ + + `替换重复项RToolStripMenuItem`  
++ + `关于AToolStripMenuItem`  
++ + + `源代码开源ToolStripMenuItem`  
++ + + `制作团队ToolStripMenuItem`  
++ `saveFileDialog1`  
++ `openFileDialog1`  
 ## 代码规范
 对于委托方法，需使用 `public` 访问修饰符。  
 对于非委托方法，需使用 `private` 访问修饰符。  
